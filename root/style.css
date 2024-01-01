@@ -1,0 +1,172 @@
+/*
+	Theme Name: Root
+	Theme URI: abolution.ru
+	Author: mr.abezgauz
+	Author URI: https://takiedela.ru/
+	Version: 1.7
+*/
+:root {
+	/* basic width - min 1200px */
+	--bw-m1200: 1160px;
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, input, ins, kbd, label, legend, mark, menu, nav, object, output, p, pre, q, ruby, s, samp, section, select, small, span, strike, strong, sub, summary, sup, time, tt, var, video {
+	margin: 0px; padding: 0px;
+	border: 0px;
+	font-size: 100%;
+}
+
+img, source {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+	background: rgb(245, 243, 240);
+	font-family: Leksa, Arial, Helvetica, sans-serif; color: rgb(48, 47, 45);
+}
+
+/* Hat
+==========*/
+.header {
+	z-index: 1000;
+	position: sticky;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0px; right: 0; left: 0px;
+	height: 70px;
+	background: #302F2D;
+}
+
+.header__cont {
+	width: var(--bw-m1200);
+}
+
+/* h1
+========*/
+.title {
+	width: var(--bw-m1200);
+	margin: 0 auto; padding: 60px 0;
+	font-size: 50px; line-height: 50px; font-weight: 500; font-style: normal; color: var(--graphite-302F2D, #302F2D);
+}
+
+/* Filters
+========*/
+.filter {
+	width: var(--bw-m1200);
+	margin-right: auto; margin-left: auto;
+}
+
+.filter-mb {margin-bottom: 60px;}
+
+.filter__form {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	gap: 0 40px;
+}
+
+.filter__form__cont {
+	display: inherit;
+	flex-direction: column;
+	gap: 10px 0;
+}
+
+.filter__form__input {width: 360px; height: 60px;}
+
+.filter__form__cont label {font-style: normal; font-size: 20px; line-height: 25px; font-weight: 500;}
+
+/* modif width max */
+.filter__form__cont-wm {flex-basis: 100%;}
+
+/* filter button */
+.filter__form__button {
+	display: flex;
+	width: 260px; height: 50px;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	gap: 10px;
+	background: #E65639;
+	text-align: center; text-transform: uppercase; font-style: normal; font-size: 14px; line-height: 16px; font-weight: 500; letter-spacing: 0.8px; color: var(--white-FFFFFF, #FFF);
+}
+
+/* Grid
+==========*/
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: var(--bw-m1200);
+	column-gap: 40px;
+	justify-content: center;
+	margin: 0 auto; padding: 0;
+	list-style: none;
+}
+
+.grid__post {
+	width: 360px; height: auto;
+	margin: 0; padding: 0;
+	background: #fff;
+}
+
+.grid__post-cont {
+	padding: 0 30px;
+	font-style: normal; font-weight: 500; letter-spacing: 0.6px; color: #302F2D;
+}
+
+.grid__post-cont_date {
+	padding-top: 20px;
+	font-size: 12px; line-height: 14px; color: #777;
+}
+
+.grid__post-cont_tags {
+	padding-top: 20px;
+	text-transform: uppercase; font-size: 12px; line-height: 14px;
+}
+
+.grid__post-cont_h3 {
+	padding-top: 20px;
+	font-size: 25px; line-height: 25px;
+}
+
+.grid__post-cont_text {
+	padding-top: 10px;
+	font-size: 20px; line-height: 25px; font-weight: 400;
+}
+
+.grid__post-cont_autor {
+	margin-top: 92px; padding-bottom: 26px;
+	font-size: 17px; line-height: 20px; font-weight: 400;
+}
+
+.post_load {
+	display: flex;
+	justify-content: center; align-items: center;
+	width: var(--bw-m1200); height: 80px;
+	margin: 40px auto 30px;
+	border: 1px solid #302F2D;
+	text-transform: uppercase; text-align: center; font-size: 16px; line-height: 18px; font-weight: 500; letter-spacing: 1px;
+}
+
+
+/* Намёк на адаптивность ...
+==========*/
+@media all and (max-width: 1160px) {
+
+	:root {
+		/* basic width - min 1200px */
+		--bw-m1200: 1160px;
+	}
+
+	.grid {
+		grid-template-columns: repeat(1, 1fr);
+		max-width: 100%;
+	}
+
+	.grid__post {
+		width: 100%;
+	}
+
+}
